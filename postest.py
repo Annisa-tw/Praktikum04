@@ -147,3 +147,14 @@ class TCetakStruk:
     def __init__(self, noStruk, totalHarga):
         self.noStruk = noStruk
         self.totalHarga = totalHarga
+
+if __name__ == "__main__":
+    kasir = LoginKasir("admin", "1234")
+    db = KoneksiDatabase("localhost", "db_kasir", "root", "")
+    pembayaran = HitungPembayaran("M001", "Nasi Goreng", 15000, 2, 30000)
+    tabelHitung = TabelHitungPembayaran("M001", "Nasi Goreng", 15000, 2, 30000)
+    tunai = PembayaranTunai()
+    kartu = PembayaranByCard()
+    tabelKartu = TabelPembayaranByCard("C001", "Visa", "BCA", 30000)
+    cetak = CetakStruk()
+    tcetak = TCetakStruk("S001", 30000)
